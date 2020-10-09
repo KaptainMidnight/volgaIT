@@ -24,7 +24,7 @@
                     <td>{{$purchase->title}}</td>
                     <td>{{$purchase->status}}</td>
                     <td>{{$purchase->address}}</td>
-                    <td>{{$purchase->amount}}</td>
+                    <td>{{$purchase->amount}}₽</td>
                     <td>{{$purchase->created_at}}</td>
                 </tr>
             @endforeach

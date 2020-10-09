@@ -19,7 +19,7 @@ class MoneyController extends Controller
         }
         User::query()->find(Auth::id())->first()->decrement('balance', $product->amount);
 
-        Cart::query()->where('user_id', Auth::id())->where('purchase_id', $id)->update(['bought' => true]);
+        Cart::query()->where('user_id', '=', Auth::id())->where('purchase_id', '=', $id)->delete();
         return back()->with('success', true);
     }
 }

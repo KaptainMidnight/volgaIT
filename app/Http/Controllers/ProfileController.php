@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        $purchases = Purchase::all();
+        $purchases = Purchase::query()->where('user_id', Auth::id())->get();
         $sum = Purchase::query()->sum('amount');
         return view('profile', ['user' => Auth::user(), 'purchases' => $purchases, 'sum' => $sum]);
     }
