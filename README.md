@@ -8,6 +8,7 @@
     * Пароль: **password**
 <h2>Админ-панель Laravel Nova</h2>
 * Выполнить команду: `php artisan nova:user`
+
 * Пройти по <a href="http://127.0.0.1:8000/nova">ссылке</a><br>
 
 
